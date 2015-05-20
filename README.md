@@ -57,5 +57,7 @@ git clone https://github.com/lordbasex/elastix-mt-gui.git
 
 #Creating RPM for installation
 rpmdev-setuptree
+rm -fr /root/rpmbuild/
+ln -s /usr/src/elastix-mt-gui/rpmbuild /root/
 
 ```
