@@ -53,5 +53,7 @@ source /etc/bashrc
 
 
 Cloning repository
-git clone https://github.com/elastixmt/elastix-mt-gui.git
+cd /usr/src
+git clone https://github.com/lordbasex/elastix-mt-gui.git
+
 ```
