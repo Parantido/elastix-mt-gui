@@ -22,7 +22,9 @@ yum -y install system-config-date system-config-firewall-base system-config-keyb
 yum -y install dialog vim mc screen nmap wget mlocate mailx
 #Packages for Development
 yum -y groupinstall "Development Tools" 
-yum -y install gcc gcc-c++ make openssl openssl-devel newt-devel ncurses-devel autoconf automake 
+yum -y install gcc gcc-c++ make openssl openssl-devel newt-devel ncurses-devel autoconf automake
+yum -y install rpm-build redhat-rpm-config rpmdevtools
+rpmdev-setuptree
 #Packages for web server.
 yum -y groupinstall "Web Server"
 yum -y install mod_ssl openssl
@@ -48,6 +50,7 @@ make prefix=/usr/local/git all
 make prefix=/usr/local/git install
 echo "export PATH=$PATH:/usr/local/git/bin" >> /etc/bashrc
 source /etc/bashrc
+
 
 Cloning repository
 git clone https://github.com/elastixmt/elastix-mt-gui.git
