@@ -59,5 +59,6 @@ git clone https://github.com/lordbasex/elastix-mt-gui.git
 rpmdev-setuptree
 rm -fr /root/rpmbuild/
 ln -s /usr/src/elastix-mt-gui/rpmbuild /root/
+rpmbuild -ba /root/rpmbuild/SPECS/elastix-agenda.spec
 
 ```
