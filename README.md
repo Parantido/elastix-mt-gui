@@ -24,7 +24,6 @@ yum -y install dialog vim mc screen nmap wget mlocate mailx
 yum -y groupinstall "Development Tools" 
 yum -y install gcc gcc-c++ make openssl openssl-devel newt-devel ncurses-devel autoconf automake
 yum -y install rpm-build redhat-rpm-config rpmdevtools
-rpmdev-setuptree
 #Packages for web server.
 yum -y groupinstall "Web Server"
 yum -y install mod_ssl openssl
@@ -55,5 +54,8 @@ source /etc/bashrc
 Cloning repository
 cd /usr/src
 git clone https://github.com/lordbasex/elastix-mt-gui.git
+
+#Creating RPM for installation
+rpmdev-setuptree
 
 ```
