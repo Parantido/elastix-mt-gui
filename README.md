@@ -22,7 +22,7 @@ yum -y install system-config-date system-config-firewall-base system-config-keyb
 yum -y install dialog vim mc screen git nmap wget mlocate mailx
 #Packages for Development
 yum -y groupinstall "Development Tools" 
-yum install gcc gcc-c++ make openssl openssl-devel newt-devel ncurses-devel autoconf automake 
+yum -y install gcc gcc-c++ make openssl openssl-devel newt-devel ncurses-devel autoconf automake 
 #Packages for web server.
 yum -y groupinstall "Web Server"
 yum -y install mod_ssl openssl
