@@ -1,2 +1,5 @@
 rpmbuild/RPMS/noarch/*
 rpmbuild/RPMS/*
+/root/rpmbuild/BUILDROOT/*
+/root/rpmbuild/BUILD/*
+/root/SRPMS/*
