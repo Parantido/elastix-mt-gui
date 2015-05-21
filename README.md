@@ -51,7 +51,7 @@ echo "export PATH=$PATH:/usr/local/git/bin" >> /etc/bashrc
 source /etc/bashrc
 
 
-Cloning repository
+#Cloning repository
 cd /usr/src
 git clone https://github.com/lordbasex/elastix-mt-gui.git
 
