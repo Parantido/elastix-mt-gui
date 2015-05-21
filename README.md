@@ -39,7 +39,7 @@ yum -y install system-config-date system-config-firewall-base system-config-keyb
 yum -y install dialog vim mc screen nmap wget mlocate mailx
 #Packages for Development
 yum -y groupinstall "Development Tools" 
-yum -y install gcc gcc-c++ make openssl openssl-devel newt-devel ncurses-devel autoconf automake
+yum -y install gcc gcc-c++ make openssl openssl-devel newt-devel ncurses-devel autoconf automake libpcap-devel
 yum -y install rpm-build redhat-rpm-config rpmdevtools
 #Packages for web server.
 yum -y groupinstall "Web Server"
@@ -67,6 +67,11 @@ make prefix=/usr/local/git all
 make prefix=/usr/local/git install
 echo "export PATH=$PATH:/usr/local/git/bin" >> /etc/bashrc
 source /etc/bashrc
+
+#Install Asterisk
+yum -y install asterisk
+/usr/sbin/adduser asterisk
+/usr/sbin/usermod -c "Asterisk VoIP PBX" -g asterisk -s /bin/bash -d /var/lib/asterisk asteris
 
 
 #Cloning repository
@@ -98,6 +103,8 @@ chkconfig --level 345 httpd on
 /etc/init.d/mysqld start
 /etc/init.d/httpd start
 
+#Reconfigure Mysql
+echo "SET PASSWORD FOR 'root'@'localhost' = PASSWORD('eLaStIx.2oo7');" | mysql -u root
 
 ## INSTALL RPM ##
 #Install elastix-firstboot
@@ -119,7 +126,8 @@ rpm -i /root/rpmbuild/RPMS/noarch/elastix-fax-3.0.0-8.noarch.rpm
 
 #Install elastix-system
 yum -y install dahdi dhcp
-rpm -i --nodeps elastix-system-3.0.0-8.noarch.rpm
+rpm -i /root/rpmbuild/RPMS/noarch/elastix-system-3.0.0-8.noarch.rpm
+
 
 
 ```
