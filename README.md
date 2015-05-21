@@ -26,6 +26,9 @@ service iptables save
 service iptables stop
 chkconfig iptables off
 
+#Yum Update
+wget https://raw.githubusercontent.com/lordbasex/elastix-mt-gui/master/elastix-framework/additionals/etc/yum.repos.d/elastix.repo -O /etc/yum.repos.d/elastix.repo
+yum -y update
 
 
 cd /usr/src
