@@ -132,5 +132,8 @@ rpm -i /root/rpmbuild/RPMS/noarch/elastix-system-3.0.0-8.noarch.rpm
 yum -y install asterisk-chan-allogsm asterisk-chan-extra asterisk-dahdi asterisk-festival asterisk-odbc asterisk-voicemail asterisk-perl festival kamailio kamailio-mysql kamailio-presence kamailio-unixodbc kamailio-utils tftp-server vsftpd uuid-perl
 rpm -i /root/rpmbuild/RPMS/noarch/elastix-pbx-3.0.0-13.noarch.rpm
 
+#Install elastix-reports
+rpm -i /root/rpmbuild/RPMS/noarch/elastix-reports-3.0.0-9.noarch.rpm
+
 
 ```
