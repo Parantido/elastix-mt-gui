@@ -129,7 +129,7 @@ yum -y install dahdi dhcp
 rpm -i /root/rpmbuild/RPMS/noarch/elastix-system-3.0.0-8.noarch.rpm
 
 #Install elastix-pbx
-yum -y install asterisk-chan-allogsm asterisk-chan-extra asterisk-dahdi asterisk-festival asterisk-odbc asterisk-voicemail festival kamailio kamailio-mysql kamailio-presence kamailio-unixodbc kamailio-utils tftp-server vsftpd
+yum -y install asterisk-chan-allogsm asterisk-chan-extra asterisk-dahdi asterisk-festival asterisk-odbc asterisk-voicemail asterisk-perl festival kamailio kamailio-mysql kamailio-presence kamailio-unixodbc kamailio-utils tftp-server vsftpd
 rpm -i /root/rpmbuild/RPMS/noarch/elastix-pbx-3.0.0-13.noarch.rpm
 
 
