@@ -14,6 +14,20 @@ Install the git package and follow the instructions on a CentOS 6.
 
 
 ```bash
+
+#Disable Selinux
+sed -i 's/enforcing/disabled/g' /etc/selinux/config/config
+
+#Activating the interface eth0
+sed -i "s/^\(ONBOOT=\).*$/\1yes/g" /etc/sysconfig/network-scripts/ifcfg-eth0
+
+#disable iptables
+service iptables save
+service iptables stop
+chkconfig iptables off
+
+
+
 cd /usr/src
 
 #System packages
