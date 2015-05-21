@@ -71,4 +71,31 @@ rpmbuild -ba /root/rpmbuild/SPECS/elastix-security.spec
 rpmbuild -ba /root/rpmbuild/SPECS/elastix.spec
 rpmbuild -ba /root/rpmbuild/SPECS/elastix-system.spec
 
+## INSTALL RPM ##
+#Install elastix-firstboot
+yum -y install libpcap-devel 
+rpm -i --nodeps /root/rpmbuild/RPMS/noarch/elastix-firstboot-3.0.0-6.noarch.rpm
+
+#Install Asterisk 
+yum -y install dnsmasq
+rpm -Uvh http://packages.asterisk.org/centos/6/current/`uname -i`/RPMS/asterisknow-version-3.0.1-3_centos6.noarch.rpm
+yum -y install asterisk asterisk-configs --enablerepo=asterisk-11
+yum -y install dahdi-linux dahdi-tools libpri
+adduser asterisk
+/usr/sbin/groupadd -r -f asterisk
+/usr/sbin/usermod -c "Asterisk VoIP PBX" -g asterisk -s /bin/bash -d /var/lib/asterisk asterisk
+
+#Install elastix-framework 
+rpm -i /root/rpmbuild/RPMS/noarch/elastix-framework-3.0.0-12.noarch.rpm
+
+#Install elastix-agenda
+rpm -i /root/rpmbuild/RPMS/noarch/elastix-agenda-3.0.0-8.noarch.rpm
+
+#Install elastix-email_admin
+yum -y install cyrus-imapd mailman spamassassin
+rpm -i /root/rpmbuild/RPMS/noarch/elastix-email_admin-3.0.0-7.noarch.rpm
+
+#Install elastix-fax
+yum -y install ghostscript hylafax iaxmodem
+rpm -i /root/rpmbuild/RPMS/noarch/elastix-fax-3.0.0-8.noarch.rpm
 ```
