@@ -51,7 +51,8 @@ yum -y install php php-cli php-common php-devel php-gd php-imap php-mbstring  ph
 #Packages for perl
 yum -y install perl-Archive-Tar perl-Archive-Zip perl-CGI perl-Convert-BinHex perl-Crypt-OpenSSL-Bignum perl-Crypt-OpenSSL-RSA perl-Date-Manip perl-Digest-HMAC perl-Digest-SHA perl-Encode-Detect perl-HTML-Parser perl-HTML-TokeParser-Simple perl-HTTP-Response-Encoding perl-IO-Multiplex perl-IO-Socket-INET6 perl-IO-Socket-SSL perl-IO-stringy perl-MIME-tools perl-Mail-DKIM perl-Mail-IMAPClient perl-Net-IP perl-Net-Server perl-Net-Telnet perl-NetAddr-IP perl-String-CRC32 perl-URI perl-Unix-Syslog perl-WWW-Mechanize perl-XML-Parser  perl-suidperl
 
-#Git 2.0.4 
+#Git 2.0.4
+yum remove git
 yum -y install curl-devel expat-devel gettext-devel openssl-devel zlib-devel
 yum -y install  gcc perl-ExtUtils-MakeMaker
 
