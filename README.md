@@ -60,5 +60,15 @@ rpmdev-setuptree
 rm -fr /root/rpmbuild/
 ln -s /usr/src/elastix-mt-gui/rpmbuild /root/
 rpmbuild -ba /root/rpmbuild/SPECS/elastix-agenda.spec
+rpmbuild -ba /root/rpmbuild/SPECS/elastix-email_admin.spec
+rpmbuild -ba /root/rpmbuild/SPECS/elastix-fax.spec
+rpmbuild -ba /root/rpmbuild/SPECS/elastix-firstboot.spec
+rpmbuild -ba /root/rpmbuild/SPECS/elastix-framework.spec
+rpmbuild -ba /root/rpmbuild/SPECS/elastix-pbx.spec
+rpmbuild -ba /root/rpmbuild/SPECS/elastix-portknock.spec
+rpmbuild -ba /root/rpmbuild/SPECS/elastix-reports.spec
+rpmbuild -ba /root/rpmbuild/SPECS/elastix-security.spec
+rpmbuild -ba /root/rpmbuild/SPECS/elastix.spec
+rpmbuild -ba /root/rpmbuild/SPECS/elastix-system.spec
 
 ```
