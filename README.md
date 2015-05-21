@@ -71,6 +71,16 @@ rpmbuild -ba /root/rpmbuild/SPECS/elastix-security.spec
 rpmbuild -ba /root/rpmbuild/SPECS/elastix.spec
 rpmbuild -ba /root/rpmbuild/SPECS/elastix-system.spec
 
+#Start Services
+chkconfig --level 345 ntpd on
+chkconfig --level 345 mysqld on
+chkconfig --level 345 httpd on
+
+/etc/init.d/htpd start
+/etc/init.d/mysqld start
+/etc/init.d/httpd start
+
+
 ## INSTALL RPM ##
 #Install elastix-firstboot
 yum -y install libpcap-devel 
