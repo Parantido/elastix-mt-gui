@@ -135,5 +135,9 @@ rpm -i /root/rpmbuild/RPMS/noarch/elastix-pbx-3.0.0-13.noarch.rpm
 #Install elastix-reports
 rpm -i /root/rpmbuild/RPMS/noarch/elastix-reports-3.0.0-9.noarch.rpm
 
+#Install elastix-portknock
+rpm -i /root/rpmbuild/RPMS/x86_64/elastix-portknock-0.0.1-0.x86_64.rpm
 
+#Install elastix-security
+rpm -i /root/rpmbuild/RPMS/noarch/elastix-security-3.0.0-5.noarch.rpm
 ```
