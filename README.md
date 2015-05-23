@@ -1,5 +1,6 @@
 # elastix-mt-gui - Elastix MT GUI
 
+![ScrennShot](https://raw.githubusercontent.com/lordbasex/elastix-mt-gui/master/logo/elastixmtgui.png)
 
 
 This code is distributed under the GNU LGPL v2.0 license.
