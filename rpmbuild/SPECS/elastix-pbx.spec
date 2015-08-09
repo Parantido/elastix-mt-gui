@@ -377,6 +377,10 @@ fi
 /etc/cron.daily/asterisk_cleanup
 
 %changelog
+* Tue Jun 30 2015 Alex Villacis Lasso <a_villacis@palosanto.com>
+- FIXED: PBX: expand table columns containing an organization code. Part of fix
+  for Elastix bug #2110.
+  
 * Fri Nov 21 2014 Luis Abarca <labarca@palosanto.com> 3.0.0-13
 - CHANGED: pbx - Build/elastix-pbx.spec: Update specfile with latest
   SVN history. Bump Release in specfile.
