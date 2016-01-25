@@ -17,7 +17,7 @@ Install the git package and follow the instructions on a CentOS 6.
 ```bash
 
 #Disable Selinux
-sed -i 's/enforcing/disabled/g' /etc/selinux/config/config
+sed -i 's/enforcing/disabled/g' /etc/selinux/config
 
 #Activating the interface eth0
 sed -i "s/^\(ONBOOT=\).*$/\1yes/g" /etc/sysconfig/network-scripts/ifcfg-eth0
@@ -30,7 +30,7 @@ chkconfig iptables off
 #Yum Update
 wget https://raw.githubusercontent.com/lordbasex/elastix-mt-gui/master/elastix-framework/additionals/etc/yum.repos.d/elastix.repo -O /etc/yum.repos.d/elastix.repo
 yum -y update
-
+yum -y install vim wget
 
 cd /usr/src
 
@@ -72,7 +72,7 @@ source /etc/bashrc
 #Install Asterisk
 yum -y install asterisk
 /usr/sbin/adduser asterisk
-/usr/sbin/usermod -c "Asterisk VoIP PBX" -g asterisk -s /bin/bash -d /var/lib/asterisk asteris
+/usr/sbin/usermod -c "Asterisk VoIP PBX" -g asterisk -s /bin/bash -d /var/lib/asterisk asterisk
 
 
 #Cloning repository
